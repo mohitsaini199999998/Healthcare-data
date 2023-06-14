@@ -6,7 +6,7 @@ from starlette.responses import StreamingResponse
 
 app = FastAPI(debug=True)
 
-@app.post('/stream', response_class=StreamingResponse)
+@app.get('/stream', response_class=StreamingResponse)
 async def stream_data_post():
     async def generate_healthcare_data():
         counter = 1
