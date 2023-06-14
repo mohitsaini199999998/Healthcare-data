@@ -1,0 +1,6 @@
+services:
+  - name: app
+    type: web
+    buildCommand: docker build -t app .
+    startCommand: docker run -p 8080:80 -d app
+    healthCheckPath: /stream
